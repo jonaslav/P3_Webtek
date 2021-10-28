@@ -1,0 +1,186 @@
+/* GLOBAL */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", sans-serif ;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+#Top_Header{
+    width: 100%;
+    height: 70px;
+    background-color: #F1CF91;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+
+}
+
+#Top_Header > h1 {
+    margin: 0;
+}
+
+#navbar {
+    background-color: #F1CF91;
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: auto;
+
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#navbar a{
+    height: 100%;
+    flex-basis: 100%;
+
+    color: initial;
+    text-decoration: none;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.5s ease ;
+}
+
+#navbar a:hover {
+    background-color: #ffdf8a;
+    box-shadow:
+            4px 0 4px rgba(0, 0, 0, 0.25),
+            -4px 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.Burger_Icon  {
+    display: none;
+}
+.Burger_Icon i {
+    cursor: pointer;
+}
+
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+}
+
+
+@media screen and (max-width: 800px){
+    #Top_Header {
+        position: absolute;
+    }
+
+    .Burger_Icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        font-size: 30px;
+    }
+    #navbar {
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+
+        margin: 0;
+        float: right;
+        width: 33%;
+        height: 300px;
+
+        transition: .5s ease-out;
+        z-index: 1;
+
+        transform: translateY(-370px);
+    }
+    #navbar a{
+        z-index: 1;
+    }
+
+    #navbar > *{
+        width: 100%;
+        height: 20px;
+    }
+    #chk:checked ~ #navbar{
+        transform: translateY(70px);
+
+    }
+}
+
+/*...Gallery...*/
+#mainContent p, #mainContent h1 {
+    margin: 0 0 0 10px;
+
+
+}
+
+#mainContent {
+    top: 16vh;
+    position: absolute;
+    z-index: -999;
+}
+
+
+
+/* Image container*/
+#imageContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 15px;
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row dense;
+    margin: 1%;
+}
+#imageContainer::before{
+    content: "";
+    padding-bottom: 100%;
+    grid-area: 1/1;
+}
+#imageContainer > img:first-child{
+    grid-area: 1/1;
+}
+#imageContainer > img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+}
+/*Modal element*/
+
+#modal{
+    display: none;
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0;
+}
+#modalWrapper{
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh auto auto auto;
+}
+#modalImage{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    object-fit: contain;
+}
+
