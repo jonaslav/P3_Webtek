@@ -184,3 +184,61 @@ body{
     object-fit: contain;
 }
 
+/* MENU */
+
+#mainCourse {
+    display: flex;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+}
+#mainCourse > * {
+    flex-basis: 300px;
+    height: 200px;
+    margin: 3%;
+    border: red solid;
+}
+
+
+
+.Menu_Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100vw;
+
+}
+
+
+@media screen and (max-width: 800px){
+    #menuHeading {
+        position: absolute;
+        top: 15vh;
+        margin: 0 0 0 2vw;
+    }
+    .Menu_Container {
+        position: absolute;
+        z-index: -2;
+        top: 20vh;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
