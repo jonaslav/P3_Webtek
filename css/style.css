@@ -186,20 +186,22 @@ body{
 
 /* MENU */
 
-#mainCourse {
+.Menu_Items {
     display: flex;
     justify-content: space-evenly;
 
     flex-wrap: wrap;
 }
-#mainCourse > * {
+.Menu_Items > * {
     flex-basis: 300px;
     height: 200px;
     margin: 3%;
     border: red solid;
 }
 
-
+#menuHeading {
+    margin: 0 0 0 2vw;
+}
 
 .Menu_Container {
     display: flex;
@@ -209,6 +211,9 @@ body{
 
 }
 
+.Menu_Item_Name {
+
+}
 
 @media screen and (max-width: 800px){
     #menuHeading {
