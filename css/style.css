@@ -229,11 +229,14 @@ body{
 
 }
 
+#slideshowContainer {
+    border: 2px solid red;
+    height: 10vw;
+}
 
-
-
-
-
+#infoContainer {
+    border: 2px solid blue;
+}
 
 
 
