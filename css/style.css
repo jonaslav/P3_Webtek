@@ -184,66 +184,113 @@ body{
     object-fit: contain;
 }
 
-/* MENU */
+/* INFO */
 
-.Menu_Items {
+#info_main{
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh auto auto auto;
     display: flex;
-    justify-content: space-evenly;
-
-    flex-wrap: wrap;
-}
-.Menu_Items > * {
-    flex-basis: 300px;
-    height: 200px;
-    margin: 3%;
-    border: red solid;
+    justify-content: space-between;
 }
 
-#menuHeading {
-    margin: 0 0 0 2vw;
+#info_Box{
+    width: 40vw;
+    margin: 3vw;
 }
 
-.Menu_Container {
+#map{
+    width: 50%;
+    height: 50%;
+    margin: 3vw;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100vw;
-
 }
 
-.Menu_Item_Name {
-
+#info_bottom{
+    margin: 0 auto auto auto;
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    bottom: 0;
+    position: absolute;
 }
 
-@media screen and (max-width: 800px){
-    #menuHeading {
-        position: absolute;
-        top: 15vh;
-        margin: 0 0 0 2vw;
+/* Menu */
+#menu_main{
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh auto auto auto;
+}
+
+#menu_main h1{
+    width: 100%;
+    height: 50px;
+    background-color: #F1CF91;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.Dish_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Menu_Container img{
+    display: flex;
+    margin: 5vh 0;
+    width: 40%;
+    border: solid black 2px;
+}
+
+.Ingredient_Container{
+    width: 55%;
+    margin: 5vh 0;
+    font-size: 1.5vw;
+}
+
+.Ingredient_Container button{
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 1.5vw;
+    background-color: #F1CF91;
+}
+
+#More_Info{
+    border: solid black 2px;
+    background-color: white;
+    font-size: 1.5vw;
+    position: fixed;
+    padding: 15px;
+    left: 45%;
+    right: 20%;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 800px) {
+
+    .Ingredient_Container {
+        width: 55%;
+        margin: 7vh 0;
+        font-size: 3vw;
     }
-    .Menu_Container {
-        position: absolute;
-        z-index: -2;
-        top: 20vh;
+    .Menu_Container img{
+        display: flex;
+        margin: 10vh 0;
+        border: solid black 2px;
     }
 
+    #More_Info {
+        font-size: 20px;
+        left: 20%;
+        right: 20%;
+    }
+    .Ingredient_Container button{
+        font-size: 3vw;
+    }
+    #info_Box{
+        width: 60vw;
+        margin: 3vw;
+        font-size: 2vw;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

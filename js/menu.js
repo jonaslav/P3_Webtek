@@ -1,40 +1,69 @@
-import {DATA} from "../json/menuItems.js"
+let x = document.getElementById("More_Info");
 
-const ITEMS_MAIN = document.getElementById('mainCourse')
-const ITEMS_ACC = document.getElementById('accessories')
-const ITEMS_DESSERT = document.getElementById('dessert')
-const ITEMS_DRINK = document.getElementById('drinks')
+const gb = {
+    n: "Hviløksbrød",
+    text: "Vårt hvitløksbrød er laget med ekte italiensk ciabatta før det stekes med en med hvitlølsmør og ekte parmesan. " +
+    "Etter steking drysser vi på et hint av persille. "
+};
+const s = {
+    n: "Scampi",
+    text: "Ferske Scampi stekt på høy varme i olivenolje med vårlø, hvitløk og chili. Serveres i en blanding av sitron-saft " +
+    " og cherry før det drysses over cayenne-pepper for å få den ekstra sterke smaken. OBS! Veldig sterk!"
+};
 
-const main = DATA.main_course_items
-const acc = DATA.accessories_items
-const dessert = DATA.dessert_items
-const drink = DATA.drinks_items
+const h = {
+    n: "Hamburger",
+    text: "Vår hamburger kommer med hjemmelaget brød med sesamfrø. Vi har fbare friske, ferske grønnsaker og vår" +
+        " egen hjemmelagde dressing. Selvfølgelig kommer det også med en saftig 105 g burger av norsk storfe."
+};
 
-let itemsMain = ""
-let itemsAccessory = ""
-let itemsDessert = ""
-let itemsDrink = ""
+const p = {
+    n: "Pizza",
+    text: "Vi lager vår Pizza på den italienske måten, men tynn, crispy bunn. Vi har vår egen saus" +
+        " og legger på saftig biffkjøtt og smakfull pepperoni."
+};
 
-// Her skal vi implementere mer av samme type logikk
-for (let i in main) {
-    console.log(main[i].name)
-    itemsMain += "<div class='Menu_Item_Name'><h3>"+main[i].name+"</h3><h4 class='Menu_Item_Price'>" + main[i].price + "</h4></div>"
+const kt = {
+    n: "Kebabtalerken",
+    text: "Vår kebabtalerken serveres med kebabkjøtt av lam, pommes frites og ferske gronnsaker. " +
+        "Vi topper med vår egen hjemmelagde hvitløksdressing"
+};
+
+const pf = {
+    n: "Pommes Frites",
+    text: "Vår pommes frites kuttes i tynne strimler for å få den perfekte kombinasjonen av sprø " +
+        "på utsiden og bløt i midten og saltes etter behov."
+};
+
+const l = {
+    n: "Løkringer",
+    text: "Løkringene våre er tynne for få den perkfekte sprø og crispy kanten. Serveres med bbq dip."
+};
+
+const c = {
+    n: "Cola",
+    text: "Helt ordinær Coca Cola, 0,33l boks"
+};
+
+const b = {
+    n: "Pils",
+    text: "0,5l med lys Dahls, pilsner."
+};
+
+const DishInfo = [gb,s,h,p,kt,pf,l,c,b];
+
+function displayInfo(button_id){
+    let y = document.getElementById(button_id).parentElement.parentElement.id.toString();
+    let z;
+    for(let i = 0; i < DishInfo.length; i++){
+        if (DishInfo[i].n === y)
+            z = DishInfo[i].text;
+    }
+    x.style.display = 'block';
+    document.getElementById("Info_Heading").innerHTML=y;
+    document.getElementById("Info_Paragraph").innerHTML=z;
 }
-for (let i in acc) {
-    itemsAccessory += "<div class='Menu_Item_Name'><h3>" + acc[i].name + "</h3><h4 class='Menu_Item_Price'>"+ acc[i].price +"</h4></div>"
+
+function closeInfo(){
+    x.style.display = 'none';
 }
-
-for (let i in dessert) {
-    itemsDessert += "<div class='Menu_Item_Name'><h3>" + dessert[i].name + "</h3><h4 class='Menu_Item_Price'>"+ dessert[i].price +"</h4></div>"
-}
-
-for (let i in drink) {
-    itemsDrink += "<div class='Menu_Item_Name'><h3>" + drink[i].name + "</h3><h4 class='Menu_Item_Price'>"+ drink[i].price +"</h4></div>"
-}
-
-ITEMS_MAIN.innerHTML = itemsMain
-ITEMS_ACC.innerHTML = itemsAccessory
-ITEMS_DESSERT.innerHTML = itemsDessert
-ITEMS_DRINK.innerHTML = itemsDrink
-
-
