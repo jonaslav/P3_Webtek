@@ -11,21 +11,34 @@
 <body id="Global_Body">
     <script src="js/navbar.js"></script>
     <main id="menu_main">
-          <div id="More_Info" style="display: none;">
+          <div class="Hidden_Box" id="Your_Cart">
             <button onclick="closeInfo()" style="float: right; margin: 3px">X</button>
+            <h2>Handlevogn</h2>
+              <ul id="Your_Cart_List" style="list-style-type: none"></ul>
+              <button onclick="clearCart()">Bestill</button>
+              <output id="Sum" style="float: right">Sum: </output>
+          </div>
+          <div class="Hidden_Box" id="More_Info">
+            <button onclick="closeInfo()" style="float: right; margin: 3px;">X</button>
             <h2 id="Info_Heading">Feil</h2>
             <p id="Info_Paragraph">Kunne ikke laste inn ytliggere informasjon</p>
         </div>
         <div class="Menu_Container" id="Starters">
             <h1>Forretter</h1>
+
             <div class="Dish_container" id="Hviløksbrød">
                 <img src="images/menu/gb.jpg" alt="Hviløksbrød">
                 <div class="Ingredient_Container">
+                    <button id="Cart_Button" onclick="displayCart()" style="float: right; font-size: 3vw;">&#x1F6D2 0</button>
                     <h2>Hvitløksbrød</h2>
                     <p><b>Pris:</b> 59,-</p>
                     <p><b>Ingredienser:</b> Ciabatta brød, hvitløk, parmesan, persille </p>
                     <p><b>Allergener:</b> Gluten, laktose</p>
                     <br><button id="Gb_info" onclick="displayInfo(id)">Mer Informasjon</button>
+                    <div class="cart">
+                        <button class="cartButton" id="addGb" onclick="addToCart(id)">+</button>
+                        <button class="cartButton" id="removeGb" onclick="removeFromCart(id)">-</button>
+                    </div>
                 </div>
             </div>
             <div class="Dish_container" id="Scampi">
@@ -36,6 +49,10 @@
                     <p><b>Ingredienser:</b> Scampi, hvitløk, chili, vårløk, cayenne-pepper </p>
                     <p><b>Allergener:</b> Skalldyr</p>
                     <br><button id="Scampi_info" onclick="displayInfo(id)">Mer Informasjon</button>
+                    <div class="cart">
+                        <button class="cartButton" id="addS" onclick="addToCart(id)">+</button>
+                        <button class="cartButton" id="removeS" onclick="removeFromCart(id)">-</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,6 +66,10 @@
                      <p><b>Ingredienser:</b> 150 g Storfekjøtt, salat, tomat, løk, dressing, brød</p>
                      <p><b>Allergener:</b> Gluten, laktose</p>
                      <br><button id="Hamburger_info" onclick="displayInfo(id)">Mer Informasjon</button>
+                     <div class="cart">
+                        <button class="cartButton" id="addH" onclick="addToCart(id)">+</button>
+                        <button class="cartButton" id="removeH" onclick="removeFromCart(id)">-</button>
+                    </div>
                  </div>
              </div>
             <div class="Dish_container" id="Pizza">
@@ -59,6 +80,10 @@
                      <p><b>Ingredienser:</b> Mozzarella, tomatsaus, biffkjøtt, pepperoni, løk , oregano</p>
                      <p><b>Allergener:</b> Gluten, laktose</p>
                      <br><button id="Pizza_info" onclick="displayInfo(id)">Mer Informasjon</button>
+                     <div class="cart">
+                        <button class="cartButton" id="addP" onclick="addToCart(id)">+</button>
+                        <button class="cartButton" id="removeP" onclick="removeFromCart(id)">-</button>
+                    </div>
                  </div>
              </div>
             <div class="Dish_container" id="Kebabtalerken">
@@ -69,6 +94,10 @@
                      <p><b>Ingredienser:</b> Lammekjøtt, pommes frites, salat, tomat, agurk, løk, hvitløksdressing</p>
                      <p><b>Allergener:</b>laktose</p>
                      <br><button id="Kebab_info" onclick="displayInfo(id)">Mer Informasjon</button>
+                     <div class="cart">
+                        <button class="cartButton" id="addK" onclick="addToCart(id)">+</button>
+                        <button class="cartButton" id="removeK" onclick="removeFromCart(id)">-</button>
+                    </div>
                  </div>
              </div>
         </div>
@@ -82,6 +111,10 @@
                      <p><b>Ingredienser:</b> Potet</p>
                      <p><b>Allergener:</b>Ingen</p>
                      <br><button id="Pommes_Frites_info" onclick="displayInfo(id)">Mer Informasjon</button>
+                     <div class="cart">
+                        <button class="cartButton" id="addPf" onclick="addToCart(id)">+</button>
+                        <button class="cartButton" id="removePf" onclick="removeFromCart(id)">-</button>
+                    </div>
                  </div>
              </div>
               <div class="Dish_container" id="Løkringer">
@@ -92,6 +125,10 @@
                      <p><b>Ingredienser:</b> Løk</p>
                      <p><b>Allergener:</b>Ingen</p>
                      <br><button id="Løkringer_info" onclick="displayInfo(id)">Mer Informasjon</button>
+                     <div class="cart">
+                        <button class="cartButton" id="addL" onclick="addToCart(id)">+</button>
+                        <button class="cartButton" id="removeL" onclick="removeFromCart(id)">-</button>
+                    </div>
                  </div>
              </div>
         </div>
@@ -103,6 +140,10 @@
                      <h2>Coca Cola</h2>
                      <p><b>Pris:</b> 29,-</p>
                      <br><button id="Cola_info" onclick="displayInfo(id)">Mer Informasjon</button>
+                     <div class="cart">
+                        <button class="cartButton" id="addC" onclick="addToCart(id)">+</button>
+                        <button class="cartButton" id="removeC" onclick="removeFromCart(id)">-</button>
+                    </div>
                  </div>
              </div>
              <div class="Dish_container" id="Pils">
@@ -111,6 +152,10 @@
                      <h2>Lys Pilsner</h2>
                      <p><b>Pris:</b> 69,-</p>
                      <br><button id="Pils_info" onclick="displayInfo(id)">Mer Informasjon</button>
+                     <div class="cart">
+                        <button class="cartButton" id="addB" onclick="addToCart(id)">+</button>
+                        <button class="cartButton" id="removeB" onclick="removeFromCart(id)">-</button>
+                    </div>
                  </div>
              </div>
         </div>
