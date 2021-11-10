@@ -79,24 +79,19 @@ body{
 
 /* Index */
 
-.flexbox-container-index {
-    display: flex;
-}
-
 .resturant-information {
-    flex: 1;
-    width: 300px;
+    margin-left: 10%;
+    width: 30%;
     height: 500px;
-    background-color: #F1CF91;
-    margin-left: 5%;
-    position: relative;
-    display: grid;
+    background-color: #ffdf8a;
 }
 
 .resturant-image {
     display: block;
-    width: 250px;
-    height: 200px;
+    width: 75%;
+    height: auto;
+    margin: auto;
+    margin-top: 20%;
     padding-top: 5%;
     overflow-y: hidden;
 }
@@ -105,6 +100,7 @@ body{
     max-width: 1000px;
     position: relative;
     margin: auto;
+    float: right;
 }
 
 
@@ -147,6 +143,51 @@ body{
 
     }
 }
+
+/*...Booking...*/
+    input {
+        background-color: #aaa;
+        height: 50px;
+        border: none;
+        margin-bottom: 20px;
+        width: 80%;
+    }
+
+    input[type=text] {
+        background-color: #aaa;
+        height: 50px;
+        border: none;
+        width: 80%;
+    }
+
+    input[type=email] {
+        background-color: #aaa;
+        height: 50px;
+        border: none;
+        width: 80%;
+    }
+
+    input[type=number] {
+        background-color: #aaa;
+        height: 50px;
+        border: none;
+        width: 10%;
+        margin-left: 30px;
+    }
+
+    input[type=submit] {
+        background-color: #aaa;
+    }
+
+    input[type=submit]:hover {
+        background-color: #ccc;
+    }
+
+    .details {
+        position: absolute;
+        top: 200px;
+        right: 20%;
+    }
 
 /*...Gallery...*/
 #mainContent p, #mainContent h1 {
