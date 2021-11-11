@@ -320,11 +320,16 @@ body{
 
 /*footer*/
 #pageFooter{
-	postion: absolute; 
-	bottom: 0; 
-	width: 100%; 
-	height: 15%; 
-	background: #f1cf91; 
+	postion: fixed;  
+	bottom: 0px;
+    	left: 0px;
+   	right: 0px;
+    	margin-bottom: 0px; 
+	height: 20%; 
+	width: 100%;
+	text-align: center;
+	background: #f1cf91;
+	
 }
 
 
