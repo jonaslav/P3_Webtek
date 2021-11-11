@@ -1,7 +1,14 @@
 /* GLOBAL */
+html {
+    position: relative;
+}
 body{
     margin: 0;
     padding: 0;
+    top: 0;
+    width: 100%;
+    position: absolute;
+
     font-family: "Trebuchet MS", sans-serif ;
 }
 
@@ -102,7 +109,7 @@ body{
         transition: .5s ease-out;
         z-index: 1;
 
-        transform: translateY(-370px);
+        transform: translateY(-230px);
     }
     #navbar a{
         z-index: 1;
