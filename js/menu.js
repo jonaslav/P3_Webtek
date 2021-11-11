@@ -2,21 +2,21 @@ let x = document.getElementById("More_Info");
 let sc = document.getElementById("Your_Cart")
 
 const gb = {    //Each as an object with name, additional info and price
-    n: "Hviløksbrød",
-    text: "Vårt hvitløksbrød er laget med ekte italiensk ciabatta før det stekes med en med hvitlølsmør og ekte parmesan. " +
+    n: "Hvitløksbrød",
+    text: "Vårt hvitløksbrød er laget med ekte italiensk ciabatta før det stekes med hvitløksmør og ekte parmesan. " +
     "Etter steking drysser vi på et hint av persille. ",
     p: 59
 };
 const s = {
     n: "Scampi",
-    text: "Ferske Scampi stekt på høy varme i olivenolje med vårlø, hvitløk og chili. Serveres i en blanding av sitron-saft " +
+    text: "Ferske Scampi stekt på høy varme i olivenolje med vårløk, hvitløk og chili. Serveres i en blanding av sitron-saft " +
     " og cherry før det drysses over cayenne-pepper for å få den ekstra sterke smaken. OBS! Veldig sterk!",
     p: 79
 };
 
 const h = {
     n: "Hamburger",
-    text: "Vår hamburger kommer med hjemmelaget brød med sesamfrø. Vi har fbare friske, ferske grønnsaker og vår" +
+    text: "Vår hamburger kommer med hjemmelaget brød med sesamfrø. Vi har bare friske, ferske grønnsaker og vår" +
         " egen hjemmelagde dressing. Selvfølgelig kommer det også med en saftig 105 g burger av norsk storfe.",
     p: 119
 };
@@ -30,7 +30,7 @@ const p = {
 
 const kt = {
     n: "Kebabtalerken",
-    text: "Vår kebabtalerken serveres med kebabkjøtt av lam, pommes frites og ferske gronnsaker. " +
+    text: "Vår kebabtalerken serveres med kebabkjøtt av lam, pommes frites og ferske grønnsaker. " +
         "Vi topper med vår egen hjemmelagde hvitløksdressing",
     p: 129
 };
@@ -44,7 +44,7 @@ const pf = {
 
 const l = {
     n: "Løkringer",
-    text: "Løkringene våre er tynne for få den perkfekte sprø og crispy kanten. Serveres med bbq dip.",
+    text: "Løkringene våre er tynne for få den perkfekte sprø og crispy kanten. Serveres med BBQ dip.",
     p: 49
 };
 
