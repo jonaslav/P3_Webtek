@@ -211,6 +211,19 @@ body{
     height: 50%;
     margin: 3vw;
     display: flex;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+}
+.Menu_Items > * {
+    flex-basis: 300px;
+    height: 200px;
+    margin: 3%;
+    border: red solid;
+}
+
+#menuHeading {
+    margin: 0 0 0 2vw;
 }
 
 #info_bottom{
@@ -310,3 +323,20 @@ body{
         font-size: 2vw;
     }
 }
+#content {
+    flex: 1 1 40vw;
+}
+#frontImageContainer {
+    width: 30vw;
+}
+
+
+
+
+
+
+
+
+
+
+
