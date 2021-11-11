@@ -409,18 +409,5 @@ button:hover {
     margin-left: 30%;
 }
 
-#slideshowContainer {
-    border: 2px solid red;
-    height: 10vw;
-}
-
-#frontContent {
-    position: absolute;
-    background-image: url("../images/slideshow/2.jpeg");
-    height: 100%;
-    width: 100%;
-}
-
-
 
 
