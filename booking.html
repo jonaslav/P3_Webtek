@@ -48,6 +48,42 @@
     </script>
 </main>
 
+<main class="booking-container">
+    <div class="details">
+        <form>
+            <input type="text" placeholder="Navn" id="name" ><br>
+            <input type="date" placeholder="Dato" id="date">
+            <input type="number" placeholder="Antall" id="number"><br>
+            <input type="email" placeholder="E-mail" id="email"><br>
+        </form>
+        <button onclick="openconfirmation()">Bestill Bord</button>
+    </div>
+    <div class="confirmation" id="conf">
+        <div id="textconf"></div>
+        <button id="closebutton" onclick="closeconfirmation()">Lukk</button>
+        
+    </div>
+
+    <script>
+        function openconfirmation() {
+            let name = document.getElementById("name").value
+            let email = document.getElementById("email").value
+            let date = document.getElementById("date").value
+            let number = document.getElementById("number").value
+            if (name != "" && email != "" && date != "" && number != "") {
+                let time = (Math.floor(Math.random() * 12) + 12) + ":30"
+                document.getElementById("conf").style.display = "block"
+                document.getElementById("textconf").innerHTML = "Takk " + name + " du har fått bord for " + number + " folk på " + date + " kl " + time
+            }
+
+            // Vet ikke hva jeg skal gjøre med informasjonen
+        }
+
+        function closeconfirmation() {
+            document.getElementById("conf").style.display = "none"
+        }
+    </script>
+</main>
 
 </body>
 </html>

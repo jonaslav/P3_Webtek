@@ -1,72 +1,22 @@
+var Index = 1;
+showSlides(Index);
 
-const slideshowImgList = ['1.jpeg', '2.jpeg', '3.jpeg']
-const container = document.getElementById('slideshowContainer')
-let innerContent = ''
-
-const slides = document.getElementsByClassName('slides')
-
-for (let i in slideshowImgList) {
-    innerContent += '<div class="slides"><img src="images/slideshow/' + slideshowImgList[i] + '.jpeg" alt="Image of ' + slideshowImgList[i] + '"></div>'
-}
-container.innerHTML = innerContent
-
-let index = 0
-let prevIndex = 0
-
-let slideTimeout
-let animationResetTimeout
-
-
-const nextSlide = () => {
-    index += 1
-    IndexCleaner()
-    ClearTimeouts()
-    ShowSlides()
+function plusSlides(x) {
+  showSlides(Index += x);
 }
 
-const IndexCleaner = () => {
-    if (index > slides.length - 1) {index = 0}
-    if (index < 0) {index = slides.length -1}
-
-    prevIndex = index - 1
-
-    if (prevIndex > slides.length -1) {prevIndex = 0}
-    if (prevIndex < 0) {prevIndex = slides.length -1}
+// Thumbnail image controls
+function currentSlide(x) {
+  showSlides(Index = x);
 }
 
-const ClearTimeouts = () => {
-    if (slideTimeout ){
-        clearTimeout(slideTimeout)
-        slideTimeout = 0
-    }
-    if (animationResetTimeout){
-        clearTimeout(animationResetTimeout)
-        animationResetTimeout = 0
-    }
-}
-
-const SlideAnimationReset = () => {
-    slides[prevIndex].classList.remove("slideOut");
-}
-
-const SlideAnimation = () => {
-    slides[index].classList.add("slideInn");
-
-    slides[prevIndex].classList.remove("slideInn");
-    slides[prevIndex].classList.add("slideOut");
-
-    animationResetTimeout = setTimeout(SlideAnimationReset, 800);
-}
-
-
-
-const ShowSlides = () => {
-    for (let i in slides.length) {
-        slides[i].classList.remove('slideInn')
-        slides[i].classList.remove('slideOut')
-    }
-
-    SlideAnimation()
-
-    slideTimeout = setTimeout(nextSlide, 5000)
+function showSlides(x) {
+  var i;
+  var slides = document.getElementsByClassName("Slides");
+  if (x > slides.length) {Index = 1}
+  if (x < 1) {Index = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[Index-1].style.display = "block";
 }
