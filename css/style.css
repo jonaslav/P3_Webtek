@@ -228,17 +228,12 @@ body{
     }
 
 }
-
-#slideshowContainer {
-    border: 2px solid red;
-    height: 10vw;
+#content {
+    flex: 1 1 40vw;
 }
-
-#infoContainer {
-    border: 2px solid blue;
+#frontImageContainer {
+    width: 30vw;
 }
-
-
 
 
 

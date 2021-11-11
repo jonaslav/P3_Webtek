@@ -1,5 +1,5 @@
 
-const slideshowImgList = ['1', '2', '3']
+const slideshowImgList = ['1.jpeg', '2.jpeg', '3.jpeg']
 const container = document.getElementById('slideshowContainer')
 let innerContent = ''
 
