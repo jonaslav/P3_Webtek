@@ -96,14 +96,46 @@ body{
     overflow-y: hidden;
 }
 
-.slideshow-area {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    float: right;
+.resturant-description {
+    margin:auto;
+    width: 80%;
 }
 
+.slideshowimage {
+    height: 40vh;
+    width: 40vw;
+}
 
+.slideshow-area {
+    position: absolute;
+    top: 300px;
+    right: 10%;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .prev, .next{
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .next {
+    right: 0;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
 @media screen and (max-width: 800px){
     #Top_Header {
         position: absolute;
