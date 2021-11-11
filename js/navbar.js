@@ -16,7 +16,6 @@ function rederNav() {
     '            <a href="booking.html">Booking</a>\n' +
     '            <a href="gallery.html">Galleri</a>\n' +
     '            <a href="info.html">Info</a>\n' +
-    '            <a href="order.html">Order</a>\n' +
         '</nav>'
 }
 rederNav()
