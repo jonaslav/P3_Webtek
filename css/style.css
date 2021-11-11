@@ -335,7 +335,91 @@ body{
 
 
 
+/*...Booking...*/
+input {
+    background-color: #ccc;
+    height: 50px;
+    border: none;
+    margin-bottom: 20px;
+}
 
+input[type=text] {
+    height: 50px;
+    border: none;
+    width: 100%;
+}
+
+input[type=email] {
+    height: 50px;
+    border: none;
+    width: 100%;
+}
+
+input[type=date] {
+    height: 50px;
+    border: none;
+    width: 60%;
+}
+
+input[type=number] {
+    height: 50px;
+    border: none;
+    width: 20%;
+    margin-left: 10%;
+}
+
+button {
+    font-size: 20px;
+    width: 40%;
+    background-color: #ccc;
+}
+
+button:hover {
+    background-color: #bbb;
+}
+
+.details {
+    position: absolute;
+    top: 200px;
+    left: 25%;
+    width: 50%;
+}
+
+.confirmation {
+    display: none;
+    width: 50%;
+    height: 40%;
+    background-color: white;
+    border: black 5px solid;
+    position: fixed;
+    top: 20%;
+    right: 25%;
+    font-size: 20px;
+}
+
+#textconf {
+    height: 50%;
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+}
+
+#closebutton {
+    margin-left: 30%;
+}
+
+#slideshowContainer {
+    border: 2px solid red;
+    height: 10vw;
+}
+
+#frontContent {
+    position: absolute;
+    background-image: url("../images/slideshow/2.jpeg");
+    height: 100%;
+    width: 100%;
+}
 
 
 
